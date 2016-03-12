@@ -1,4 +1,7 @@
-## Dataset description
+## Boston Housing Price dataset 
+UCI machine learning repository ['https://archive.ics.uci.edu/ml/datasets/Housing']
+
+### Attributes
 1. CRIM: per capita crime rate by town 
 2. ZN: proportion of residential land zoned for lots over 25,000 sq.ft. 
 3. INDUS: proportion of non-retail business acres per town 
