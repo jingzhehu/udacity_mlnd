@@ -51,6 +51,8 @@ class LearningAgent(Agent):
         self.q_table = pd.DataFrame(np.random.rand(len(self.q_actions), len(self.q_states)).T,
                                     columns=self.q_actions, index=index)
 
+        self.q_tables = []
+
     def reset(self, destination=None):
 
         # TODO: Prepare for a new trip; reset any variables here, if required
@@ -180,6 +182,7 @@ def run_exp(a, e, sim, n_exp=1, n_trials_test=10, n_trials_train=100, showplot=F
             print(a.q_table)
             print('==========================================================')
 
+        a.q_tables.append(a.q_table)
         a.q_table = pd.DataFrame(0, index=a.q_table.index, columns=a.q_table.columns)
 
     if n_exp > 1:
